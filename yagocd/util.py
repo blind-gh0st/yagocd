@@ -75,7 +75,7 @@ class Since(object):
     # Parameter for controlling version compatibility checks.
     # Setting this to `False` will skip checking the server
     # version on each function call.
-    ENABLED = True
+    ENABLED = False
 
     def __init__(self, since_version):
         self._since_version = LooseVersion(since_version)
