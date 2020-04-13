@@ -86,6 +86,7 @@ class Since(object):
             if self.ENABLED:
                 this = args[0]
                 server_version = this._session.server_version
+            '''
                 if LooseVersion(server_version) < self._since_version:
                     name = "{}.{}".format(this.__class__.__name__, entity.__name__)
                     raise RuntimeError(
@@ -96,6 +97,7 @@ class Since(object):
                             since_version=self._since_version
                         )
                     )
+            '''
 
             return entity(*args, **kwargs)
 
