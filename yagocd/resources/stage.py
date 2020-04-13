@@ -139,7 +139,7 @@ class StageManager(BaseManager, RequireParamMixin):
         stage_counter = self._require_param('stage_counter', func_args)
 
         response = self._session.get(
-            path=self._session.urljoin(self.RESOURCE_PATH, 'instance', pipeline_counter, stage_counter).format(
+            path=self._session.urljoin(self.RESOURCE_PATH, pipeline_name, pipeline_counter, stage_name, stage_counter).format(
                 base_api=self.base_api,
                 pipeline_name=pipeline_name,
                 stage_name=stage_name
